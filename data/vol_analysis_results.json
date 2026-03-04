@@ -1,0 +1,904 @@
+{
+  "vasicek": {
+    "a": 0.000626,
+    "b": 1.2051,
+    "sigma": 0.045127,
+    "half_life": 1107.5,
+    "rate_variable": "TBill3M"
+  },
+  "vasicek_by_period": {
+    "Pre-Financialization (1995-2003)": {
+      "a": 0.002971,
+      "b": 0.2952,
+      "sigma": 0.046682,
+      "half_life": 233.3,
+      "mean_rate": 2.406
+    },
+    "Financialization (2004-2021)": {
+      "a": 0.000382,
+      "b": 0.6885,
+      "sigma": 0.04485,
+      "half_life": 1813.4,
+      "mean_rate": 1.1743
+    },
+    "Post-2022": {
+      "a": 0.004101,
+      "b": 5.3003,
+      "sigma": 0.043622,
+      "half_life": 169.0,
+      "mean_rate": 4.0351
+    }
+  },
+  "dcc_garch": {
+    "Gold_Bond10Y_chg": {
+      "garch": {
+        "Gold": {
+          "alpha": 0.0286,
+          "beta": 0.9588,
+          "persistence": 0.9874
+        },
+        "Bond10Y_chg": {
+          "alpha": 0.0555,
+          "beta": 0.9333,
+          "persistence": 0.9888
+        }
+      },
+      "dcc_a": 0.01,
+      "dcc_b": 0.98,
+      "dcc_by_period": {
+        "Financialization (2004-2021)": {
+          "mean": -0.3231,
+          "std": 0.0723
+        },
+        "Post-2022 Tightening": {
+          "mean": -0.3516,
+          "std": 0.0704
+        }
+      },
+      "n_obs": 2624
+    },
+    "WTI_Bond10Y_chg": {
+      "garch": {
+        "WTI": {
+          "alpha": 0.1241,
+          "beta": 0.8423,
+          "persistence": 0.9664
+        },
+        "Bond10Y_chg": {
+          "alpha": 0.0555,
+          "beta": 0.9333,
+          "persistence": 0.9888
+        }
+      },
+      "dcc_a": 0.01,
+      "dcc_b": 0.84,
+      "dcc_by_period": {
+        "Financialization (2004-2021)": {
+          "mean": 0.2084,
+          "std": 0.0281
+        },
+        "Post-2022 Tightening": {
+          "mean": 0.2025,
+          "std": 0.0201
+        }
+      },
+      "n_obs": 2624
+    },
+    "Copper_Bond10Y_chg": {
+      "garch": {
+        "Copper": {
+          "alpha": 0.0691,
+          "beta": 0.8357,
+          "persistence": 0.9048
+        },
+        "Bond10Y_chg": {
+          "alpha": 0.0555,
+          "beta": 0.9333,
+          "persistence": 0.9888
+        }
+      },
+      "dcc_a": 0.01,
+      "dcc_b": 0.98,
+      "dcc_by_period": {
+        "Financialization (2004-2021)": {
+          "mean": 0.1415,
+          "std": 0.0579
+        },
+        "Post-2022 Tightening": {
+          "mean": 0.0245,
+          "std": 0.066
+        }
+      },
+      "n_obs": 2624
+    },
+    "BTC_Bond10Y_chg": {
+      "garch": {
+        "BTC": {
+          "alpha": 0.1385,
+          "beta": 0.8048,
+          "persistence": 0.9433
+        },
+        "Bond10Y_chg": {
+          "alpha": 0.0555,
+          "beta": 0.9333,
+          "persistence": 0.9888
+        }
+      },
+      "dcc_a": 0.01,
+      "dcc_b": 0.5,
+      "dcc_by_period": {
+        "Financialization (2004-2021)": {
+          "mean": 0.0079,
+          "std": 0.0118
+        },
+        "Post-2022 Tightening": {
+          "mean": 0.0064,
+          "std": 0.0167
+        }
+      },
+      "n_obs": 2624
+    },
+    "BTC_Gold": {
+      "garch": {
+        "BTC": {
+          "alpha": 0.1385,
+          "beta": 0.8048,
+          "persistence": 0.9433
+        },
+        "Gold": {
+          "alpha": 0.0286,
+          "beta": 0.9588,
+          "persistence": 0.9874
+        }
+      },
+      "dcc_a": 0.01,
+      "dcc_b": 0.98,
+      "dcc_by_period": {
+        "Financialization (2004-2021)": {
+          "mean": 0.0819,
+          "std": 0.0808
+        },
+        "Post-2022 Tightening": {
+          "mean": 0.0765,
+          "std": 0.0695
+        }
+      },
+      "n_obs": 2624
+    },
+    "BTC_SPX": {
+      "garch": {
+        "BTC": {
+          "alpha": 0.1385,
+          "beta": 0.8048,
+          "persistence": 0.9433
+        },
+        "SPX": {
+          "alpha": 0.187,
+          "beta": 0.7814,
+          "persistence": 0.9684
+        }
+      },
+      "dcc_a": 0.01,
+      "dcc_b": 0.98,
+      "dcc_by_period": {
+        "Financialization (2004-2021)": {
+          "mean": 0.126,
+          "std": 0.0931
+        },
+        "Post-2022 Tightening": {
+          "mean": 0.2579,
+          "std": 0.108
+        }
+      },
+      "n_obs": 2624
+    }
+  },
+  "monday_effect": {
+    "Gold": {
+      "monday_vol": 0.1519,
+      "monday_adj_vol": 0.0877,
+      "non_monday_vol": 0.1465,
+      "ratio": 1.0366
+    },
+    "WTI": {
+      "monday_vol": 0.4992,
+      "monday_adj_vol": 0.2882,
+      "non_monday_vol": 0.4492,
+      "ratio": 1.1113
+    },
+    "Copper": {
+      "monday_vol": 0.2024,
+      "monday_adj_vol": 0.1169,
+      "non_monday_vol": 0.2235,
+      "ratio": 0.9054
+    },
+    "SPX": {
+      "monday_vol": 0.1949,
+      "monday_adj_vol": 0.1125,
+      "non_monday_vol": 0.1728,
+      "ratio": 1.128
+    },
+    "BTC": {
+      "monday_vol": 0.8787,
+      "monday_adj_vol": 0.5073,
+      "non_monday_vol": 0.6367,
+      "ratio": 1.3802
+    },
+    "DXY": {
+      "monday_vol": 0.0613,
+      "monday_adj_vol": 0.0354,
+      "non_monday_vol": 0.0714,
+      "ratio": 0.8583
+    }
+  },
+  "structural_breaks": {
+    "Gold_Bond_2020": {
+      "corr_before": -0.357,
+      "corr_after": -0.2833,
+      "n_before": 1368,
+      "n_after": 1256,
+      "z_stat": -2.1024,
+      "p_value": 0.035515,
+      "description": "COVID-19 팬데믹"
+    },
+    "Gold_Bond_2022": {
+      "corr_before": -0.3035,
+      "corr_after": -0.3421,
+      "n_before": 1881,
+      "n_after": 743,
+      "z_stat": 0.9932,
+      "p_value": 0.320594,
+      "description": "연준 금리인상 시작"
+    },
+    "WTI_Bond_2020": {
+      "corr_before": 0.2379,
+      "corr_after": 0.1263,
+      "n_before": 1368,
+      "n_after": 1256,
+      "z_stat": 2.9542,
+      "p_value": 0.003135,
+      "description": "COVID-19 팬데믹"
+    },
+    "WTI_Bond_2022": {
+      "corr_before": 0.1862,
+      "corr_after": 0.1528,
+      "n_before": 1881,
+      "n_after": 743,
+      "z_stat": 0.7931,
+      "p_value": 0.427742,
+      "description": "연준 금리인상 시작"
+    },
+    "Copper_Bond_2020": {
+      "corr_before": 0.2037,
+      "corr_after": 0.0003,
+      "n_before": 1368,
+      "n_after": 1256,
+      "z_stat": 5.2717,
+      "p_value": 0.0,
+      "description": "COVID-19 팬데믹"
+    },
+    "Copper_Bond_2022": {
+      "corr_before": 0.1708,
+      "corr_after": -0.059,
+      "n_before": 1881,
+      "n_after": 743,
+      "z_stat": 5.334,
+      "p_value": 0.0,
+      "description": "연준 금리인상 시작"
+    },
+    "BTC_Bond10Y_chg_2020": {
+      "corr_before": 0.0144,
+      "corr_after": -0.0148,
+      "n_before": 1368,
+      "n_after": 1256,
+      "z_stat": 0.7476,
+      "p_value": 0.45472,
+      "description": "COVID-19"
+    },
+    "BTC_Gold_2020": {
+      "corr_before": 0.0515,
+      "corr_after": 0.115,
+      "n_before": 1368,
+      "n_after": 1256,
+      "z_stat": -1.6369,
+      "p_value": 0.10166,
+      "description": "COVID-19"
+    },
+    "BTC_SPX_2020": {
+      "corr_before": 0.0203,
+      "corr_after": 0.3922,
+      "n_before": 1368,
+      "n_after": 1256,
+      "z_stat": -10.0729,
+      "p_value": 0.0,
+      "description": "COVID-19"
+    },
+    "BTC_Bond10Y_chg_2022": {
+      "corr_before": 0.0312,
+      "corr_after": -0.0729,
+      "n_before": 1881,
+      "n_after": 743,
+      "z_stat": 2.4033,
+      "p_value": 0.016248,
+      "description": "금리인상"
+    },
+    "BTC_Gold_2022": {
+      "corr_before": 0.0736,
+      "corr_after": 0.1179,
+      "n_before": 1881,
+      "n_after": 743,
+      "z_stat": -1.0303,
+      "p_value": 0.302877,
+      "description": "금리인상"
+    },
+    "BTC_SPX_2022": {
+      "corr_before": 0.1712,
+      "corr_after": 0.4138,
+      "n_before": 1881,
+      "n_after": 743,
+      "z_stat": -6.158,
+      "p_value": 0.0,
+      "description": "금리인상"
+    },
+    "BTC_Bond10Y_chg_2024": {
+      "corr_before": -0.0086,
+      "corr_after": 0.0666,
+      "n_before": 2338,
+      "n_after": 286,
+      "z_stat": -1.1971,
+      "p_value": 0.231265,
+      "description": "BTC ETF 승인"
+    },
+    "BTC_Gold_2024": {
+      "corr_before": 0.085,
+      "corr_after": 0.0622,
+      "n_before": 2338,
+      "n_after": 286,
+      "z_stat": 0.365,
+      "p_value": 0.715109,
+      "description": "BTC ETF 승인"
+    },
+    "BTC_SPX_2024": {
+      "corr_before": 0.2149,
+      "corr_after": 0.3508,
+      "n_before": 2338,
+      "n_after": 286,
+      "z_stat": -2.3524,
+      "p_value": 0.018654,
+      "description": "BTC ETF 승인"
+    },
+    "Gold_BEI_2022": {
+      "corr_before": 0.0221,
+      "corr_after": 0.0262,
+      "n_before": 1881,
+      "n_after": 743,
+      "z_stat": -0.0955,
+      "p_value": 0.92393
+    }
+  },
+  "granger": {
+    "Gold_to_Bond10Y_chg": {
+      "F": 2.8457,
+      "p": 0.009169,
+      "lag": 6
+    },
+    "Bond10Y_chg_to_Gold": {
+      "F": 17.3462,
+      "p": 3.2e-05,
+      "lag": 1
+    },
+    "WTI_to_Bond10Y_chg": {
+      "F": 2.2899,
+      "p": 0.101484,
+      "lag": 2
+    },
+    "Bond10Y_chg_to_WTI": {
+      "F": 2.4893,
+      "p": 0.058632,
+      "lag": 3
+    },
+    "Copper_to_Bond10Y_chg": {
+      "F": 1.9657,
+      "p": 0.056061,
+      "lag": 7
+    },
+    "Bond10Y_chg_to_Copper": {
+      "F": 2.971,
+      "p": 0.002585,
+      "lag": 8
+    },
+    "Gold_to_WTI": {
+      "F": 2.6325,
+      "p": 0.015107,
+      "lag": 6
+    },
+    "WTI_to_Gold": {
+      "F": 1.1618,
+      "p": 0.318557,
+      "lag": 8
+    },
+    "Gold_to_Copper": {
+      "F": 2.2448,
+      "p": 0.036498,
+      "lag": 6
+    },
+    "Copper_to_Gold": {
+      "F": 0.6092,
+      "p": 0.543878,
+      "lag": 2
+    },
+    "WTI_to_Copper": {
+      "F": 1.6182,
+      "p": 0.198458,
+      "lag": 2
+    },
+    "Copper_to_WTI": {
+      "F": 4.0946,
+      "p": 0.016769,
+      "lag": 2
+    },
+    "BTC_to_Bond10Y_chg": {
+      "F": 2.5681,
+      "p": 0.076874,
+      "lag": 2
+    },
+    "Bond10Y_chg_to_BTC": {
+      "F": 0.929,
+      "p": 0.395081,
+      "lag": 2
+    },
+    "BTC_to_Gold": {
+      "F": 1.9447,
+      "p": 0.058962,
+      "lag": 7
+    },
+    "Gold_to_BTC": {
+      "F": 1.4007,
+      "p": 0.200436,
+      "lag": 7
+    },
+    "BTC_to_WTI": {
+      "F": 5.234,
+      "p": 8.7e-05,
+      "lag": 5
+    },
+    "WTI_to_BTC": {
+      "F": 1.6719,
+      "p": 0.170924,
+      "lag": 3
+    },
+    "BTC_to_Copper": {
+      "F": 3.03,
+      "p": 0.003563,
+      "lag": 7
+    },
+    "Copper_to_BTC": {
+      "F": 1.5895,
+      "p": 0.207504,
+      "lag": 1
+    },
+    "BTC_to_SPX": {
+      "F": 3.4364,
+      "p": 0.032326,
+      "lag": 2
+    },
+    "SPX_to_BTC": {
+      "F": 1.7962,
+      "p": 0.073172,
+      "lag": 8
+    },
+    "VIX_ret_to_Gold": {
+      "F": 5.7315,
+      "p": 0.016733,
+      "lag": 1
+    },
+    "VIX_ret_to_WTI": {
+      "F": 3.9755,
+      "p": 0.000108,
+      "lag": 8
+    },
+    "VIX_ret_to_BTC": {
+      "F": 2.2517,
+      "p": 0.021436,
+      "lag": 8
+    },
+    "VIX_ret_to_SPX": {
+      "F": 8.4046,
+      "p": 1e-06,
+      "lag": 4
+    }
+  },
+  "spillover_full_1995": {
+    "matrix": {
+      "Gold": {
+        "Gold": 99.1,
+        "WTI": 0.0,
+        "Bond10Y_chg": 0.8,
+        "Copper": 0.1
+      },
+      "WTI": {
+        "Gold": 1.3,
+        "WTI": 98.0,
+        "Bond10Y_chg": 0.4,
+        "Copper": 0.3
+      },
+      "Bond10Y_chg": {
+        "Gold": 9.8,
+        "WTI": 4.3,
+        "Bond10Y_chg": 85.9,
+        "Copper": 0.1
+      },
+      "Copper": {
+        "Gold": 5.6,
+        "WTI": 6.9,
+        "Bond10Y_chg": 1.4,
+        "Copper": 86.1
+      }
+    },
+    "total_index": 7.8,
+    "var_lag": 3,
+    "n_obs": 2624
+  },
+  "spillover_btc_2014": {
+    "matrix": {
+      "BTC": {
+        "BTC": 98.1,
+        "Gold": 0.4,
+        "WTI": 0.2,
+        "Bond10Y_chg": 0.3,
+        "Copper": 0.4,
+        "SPX": 0.6
+      },
+      "Gold": {
+        "BTC": 1.1,
+        "Gold": 96.8,
+        "WTI": 0.3,
+        "Bond10Y_chg": 0.9,
+        "Copper": 0.1,
+        "SPX": 0.7
+      },
+      "WTI": {
+        "BTC": 1.2,
+        "Gold": 1.6,
+        "WTI": 93.7,
+        "Bond10Y_chg": 0.8,
+        "Copper": 0.4,
+        "SPX": 2.3
+      },
+      "Bond10Y_chg": {
+        "BTC": 0.4,
+        "Gold": 10.2,
+        "WTI": 4.3,
+        "Bond10Y_chg": 83.7,
+        "Copper": 0.5,
+        "SPX": 0.9
+      },
+      "Copper": {
+        "BTC": 1.7,
+        "Gold": 5.4,
+        "WTI": 6.7,
+        "Bond10Y_chg": 2.0,
+        "Copper": 83.4,
+        "SPX": 0.8
+      },
+      "SPX": {
+        "BTC": 5.1,
+        "Gold": 0.3,
+        "WTI": 6.6,
+        "Bond10Y_chg": 2.2,
+        "Copper": 2.9,
+        "SPX": 82.9
+      }
+    },
+    "total_index": 10.2,
+    "var_lag": 8,
+    "n_obs": 2624
+  },
+  "spillover_Financialization (2004-2021)": {
+    "matrix": {
+      "Gold": {
+        "Gold": 96.7,
+        "WTI": 0.5,
+        "Bond10Y_chg": 2.6,
+        "Copper": 0.2
+      },
+      "WTI": {
+        "Gold": 1.9,
+        "WTI": 95.6,
+        "Bond10Y_chg": 1.2,
+        "Copper": 1.3
+      },
+      "Bond10Y_chg": {
+        "Gold": 10.4,
+        "WTI": 5.6,
+        "Bond10Y_chg": 82.7,
+        "Copper": 1.3
+      },
+      "Copper": {
+        "Gold": 3.0,
+        "WTI": 6.9,
+        "Bond10Y_chg": 4.1,
+        "Copper": 86.0
+      }
+    },
+    "total_index": 9.8,
+    "var_lag": 7,
+    "n_obs": 1831
+  },
+  "spillover_Post-2022 Tightening": {
+    "matrix": {
+      "Gold": {
+        "Gold": 99.2,
+        "WTI": 0.2,
+        "Bond10Y_chg": 0.2,
+        "Copper": 0.4
+      },
+      "WTI": {
+        "Gold": 5.0,
+        "WTI": 94.6,
+        "Bond10Y_chg": 0.0,
+        "Copper": 0.3
+      },
+      "Bond10Y_chg": {
+        "Gold": 11.5,
+        "WTI": 4.3,
+        "Bond10Y_chg": 83.9,
+        "Copper": 0.3
+      },
+      "Copper": {
+        "Gold": 17.5,
+        "WTI": 6.4,
+        "Bond10Y_chg": 0.2,
+        "Copper": 75.9
+      }
+    },
+    "total_index": 11.6,
+    "var_lag": 1,
+    "n_obs": 793
+  },
+  "spillover_btc_2022": {
+    "matrix": {
+      "BTC": {
+        "BTC": 99.5,
+        "Gold": 0.0,
+        "WTI": 0.1,
+        "Bond10Y_chg": 0.1,
+        "Copper": 0.2,
+        "SPX": 0.1
+      },
+      "Gold": {
+        "BTC": 1.0,
+        "Gold": 97.7,
+        "WTI": 0.2,
+        "Bond10Y_chg": 0.1,
+        "Copper": 0.4,
+        "SPX": 0.5
+      },
+      "WTI": {
+        "BTC": 0.3,
+        "Gold": 4.9,
+        "WTI": 94.4,
+        "Bond10Y_chg": 0.0,
+        "Copper": 0.3,
+        "SPX": 0.1
+      },
+      "Bond10Y_chg": {
+        "BTC": 0.4,
+        "Gold": 11.0,
+        "WTI": 4.2,
+        "Bond10Y_chg": 83.6,
+        "Copper": 0.3,
+        "SPX": 0.5
+      },
+      "Copper": {
+        "BTC": 1.3,
+        "Gold": 16.2,
+        "WTI": 6.3,
+        "Bond10Y_chg": 0.2,
+        "Copper": 74.9,
+        "SPX": 1.1
+      },
+      "SPX": {
+        "BTC": 18.0,
+        "Gold": 0.4,
+        "WTI": 0.3,
+        "Bond10Y_chg": 1.0,
+        "Copper": 2.7,
+        "SPX": 77.6
+      }
+    },
+    "total_index": 12.0,
+    "var_lag": 1,
+    "n_obs": 793
+  },
+  "basic_stats": {
+    "Pre-Financialization (1995-2003)": {
+      "N obs": 0,
+      "Gold Ann Return": NaN,
+      "Gold Ann Vol": NaN,
+      "WTI Ann Return": NaN,
+      "WTI Ann Vol": NaN,
+      "Copper Ann Return": NaN,
+      "Copper Ann Vol": NaN,
+      "SPX Ann Return": NaN,
+      "SPX Ann Vol": NaN,
+      "BTC Ann Return": NaN,
+      "BTC Ann Vol": NaN,
+      "DXY Ann Return": NaN,
+      "DXY Ann Vol": NaN,
+      "Gold-Bond Corr": NaN,
+      "WTI-Bond Corr": NaN,
+      "Copper-Bond Corr": NaN,
+      "BTC-Bond10Y_chg Corr": NaN,
+      "BTC-Gold Corr": NaN,
+      "BTC-SPX Corr": NaN,
+      "BTC-WTI Corr": NaN,
+      "Bond10Y Mean": 4.65,
+      "BEI Mean": 1.96,
+      "VIX Mean": 24.96
+    },
+    "Financialization (2004-2021)": {
+      "N obs": 1831,
+      "Gold Ann Return": 5.49,
+      "Gold Ann Vol": 14.82,
+      "WTI Ann Return": 5.15,
+      "WTI Ann Vol": 49.13,
+      "Copper Ann Return": 5.32,
+      "Copper Ann Vol": 21.18,
+      "SPX Ann Return": 12.62,
+      "SPX Ann Vol": 17.88,
+      "BTC Ann Return": 63.98,
+      "BTC Ann Vol": 73.74,
+      "DXY Ann Return": 1.61,
+      "DXY Ann Vol": 6.71,
+      "Gold-Bond Corr": -0.3026,
+      "WTI-Bond Corr": 0.2036,
+      "Copper-Bond Corr": 0.1877,
+      "BTC-Bond10Y_chg Corr": 0.0263,
+      "BTC-Gold Corr": 0.0809,
+      "BTC-SPX Corr": 0.1621,
+      "BTC-WTI Corr": 0.0582,
+      "Bond10Y Mean": 2.85,
+      "BEI Mean": 2.05,
+      "VIX Mean": 18.92
+    },
+    "Post-2022 Tightening": {
+      "N obs": 793,
+      "Gold Ann Return": 13.97,
+      "Gold Ann Vol": 14.6,
+      "WTI Ann Return": -2.39,
+      "WTI Ann Vol": 37.47,
+      "Copper Ann Return": 0.42,
+      "Copper Ann Vol": 23.73,
+      "SPX Ann Return": 7.07,
+      "SPX Ann Vol": 17.31,
+      "BTC Ann Return": 19.07,
+      "BTC Ann Vol": 55.9,
+      "DXY Ann Return": 3.74,
+      "DXY Ann Vol": 7.51,
+      "Gold-Bond Corr": -0.341,
+      "WTI-Bond Corr": 0.1206,
+      "Copper-Bond Corr": -0.0648,
+      "BTC-Bond10Y_chg Corr": -0.055,
+      "BTC-Gold Corr": 0.0921,
+      "BTC-SPX Corr": 0.4202,
+      "BTC-WTI Corr": 0.0133,
+      "Bond10Y Mean": 3.75,
+      "BEI Mean": 2.36,
+      "VIX Mean": 19.24
+    }
+  },
+  "btc_correlation_matrix": {
+    "BTC": {
+      "BTC": 1.0,
+      "Gold": 0.0828,
+      "WTI": 0.0493,
+      "Copper": 0.0979,
+      "SPX": 0.2232,
+      "Bond10Y_chg": -0.0018
+    },
+    "Gold": {
+      "BTC": 0.0828,
+      "Gold": 1.0,
+      "WTI": 0.1042,
+      "Copper": 0.2331,
+      "SPX": 0.0273,
+      "Bond10Y_chg": -0.3092
+    },
+    "WTI": {
+      "BTC": 0.0493,
+      "Gold": 0.1042,
+      "WTI": 1.0,
+      "Copper": 0.279,
+      "SPX": 0.246,
+      "Bond10Y_chg": 0.1654
+    },
+    "Copper": {
+      "BTC": 0.0979,
+      "Gold": 0.2331,
+      "WTI": 0.279,
+      "Copper": 1.0,
+      "SPX": 0.2469,
+      "Bond10Y_chg": 0.0775
+    },
+    "SPX": {
+      "BTC": 0.2232,
+      "Gold": 0.0273,
+      "WTI": 0.246,
+      "Copper": 0.2469,
+      "SPX": 1.0,
+      "Bond10Y_chg": 0.1671
+    },
+    "Bond10Y_chg": {
+      "BTC": -0.0018,
+      "Gold": -0.3092,
+      "WTI": 0.1654,
+      "Copper": 0.0775,
+      "SPX": 0.1671,
+      "Bond10Y_chg": 1.0
+    }
+  },
+  "full_correlation_matrix": {
+    "Gold": {
+      "Gold": 1.0,
+      "WTI": 0.1042,
+      "Copper": 0.2331,
+      "SPX": 0.0273,
+      "Bond10Y_chg": -0.3092
+    },
+    "WTI": {
+      "Gold": 0.1042,
+      "WTI": 1.0,
+      "Copper": 0.279,
+      "SPX": 0.246,
+      "Bond10Y_chg": 0.1654
+    },
+    "Copper": {
+      "Gold": 0.2331,
+      "WTI": 0.279,
+      "Copper": 1.0,
+      "SPX": 0.2469,
+      "Bond10Y_chg": 0.0775
+    },
+    "SPX": {
+      "Gold": 0.0273,
+      "WTI": 0.246,
+      "Copper": 0.2469,
+      "SPX": 1.0,
+      "Bond10Y_chg": 0.1671
+    },
+    "Bond10Y_chg": {
+      "Gold": -0.3092,
+      "WTI": 0.1654,
+      "Copper": 0.0775,
+      "SPX": 0.1671,
+      "Bond10Y_chg": 1.0
+    }
+  },
+  "crisis_correlations": {
+    "COVID Crash (2020.02-2020.04)": {
+      "Gold-Bond": -0.0309,
+      "WTI-Bond": 0.1187,
+      "Copper-Bond": 0.1497,
+      "BTC-Bond10Y_chg": 0.0957,
+      "BTC-Gold": 0.2577,
+      "BTC-SPX": 0.5712
+    },
+    "Rate Hike (2022.03-2022.12)": {
+      "Gold-Bond": -0.3618,
+      "WTI-Bond": 0.0402,
+      "Copper-Bond": -0.1166,
+      "BTC-Bond10Y_chg": -0.1306,
+      "BTC-Gold": 0.1243,
+      "BTC-SPX": 0.573
+    },
+    "SVB Crisis (2023.03-2023.04)": {
+      "Gold-Bond": -0.6641,
+      "WTI-Bond": 0.1307,
+      "Copper-Bond": 0.1301,
+      "BTC-Bond10Y_chg": -0.1308,
+      "BTC-Gold": 0.3698,
+      "BTC-SPX": 0.0961
+    }
+  }
+}
