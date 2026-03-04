@@ -1,0 +1,605 @@
+{
+  "vasicek_comparison": {
+    "ZLB Era (2008-2021)": {
+      "N": 3003,
+      "vasicek": {
+        "a": 0.07509,
+        "b": 0.4826,
+        "sigma": 0.28971,
+        "halflife_days": 9.2,
+        "loglik": 7759.12,
+        "AIC": -15512.25,
+        "BIC": -15494.23
+      },
+      "cir": {
+        "a": 0.978438,
+        "b": 0.4485,
+        "sigma": 0.79645,
+        "loglik": 7568.28,
+        "AIC": -15130.56,
+        "BIC": -15112.54
+      },
+      "mean_rate": 0.5048
+    },
+    "Tightening (2022-2025)": {
+      "N": 770,
+      "vasicek": {
+        "a": 1.031359,
+        "b": 5.3353,
+        "sigma": 0.699809,
+        "halflife_days": 0.7,
+        "loglik": 1309.39,
+        "AIC": -2612.79,
+        "BIC": -2598.85
+      },
+      "cir": {
+        "a": 0.441577,
+        "b": 7.0795,
+        "sigma": 0.527289,
+        "loglik": 1075.16,
+        "AIC": -2144.32,
+        "BIC": -2130.38
+      },
+      "mean_rate": 4.0296
+    }
+  },
+  "real_yield_dcc": {
+    "Gold_TIPS": {
+      "garch": {
+        "Gold": {
+          "alpha": 0.0175,
+          "beta": 0.9751
+        },
+        "TIPS10Y_chg": {
+          "alpha": 0.05,
+          "beta": 0.93
+        }
+      },
+      "dcc_params": {
+        "a": 0.217,
+        "b": 0.783
+      },
+      "loglik": 748.02,
+      "AIC": -1480.03,
+      "BIC": -1430.12,
+      "mean_corr": -0.366,
+      "std_corr": 0.3505
+    },
+    "Gold_TIPS_Pre-2022": {
+      "mean": -0.3663,
+      "std": 0.35
+    },
+    "Gold_TIPS_Post-2022": {
+      "mean": -0.3653,
+      "std": 0.3518
+    },
+    "Gold_Nominal": {
+      "garch": {
+        "Gold": {
+          "alpha": 0.0175,
+          "beta": 0.9751
+        },
+        "Bond10Y_chg": {
+          "alpha": 0.05,
+          "beta": 0.93
+        }
+      },
+      "dcc_params": {
+        "a": 0.2616,
+        "b": 0.7384
+      },
+      "loglik": 835.89,
+      "AIC": -1655.78,
+      "BIC": -1605.86,
+      "mean_corr": -0.328,
+      "std_corr": 0.4117
+    },
+    "BTC_TIPS": {
+      "garch": {
+        "BTC": {
+          "alpha": 0.1252,
+          "beta": 0.8389
+        },
+        "TIPS10Y_chg": {
+          "alpha": 0.05,
+          "beta": 0.93
+        }
+      },
+      "dcc_params": {
+        "a": 0.3234,
+        "b": 0.4257
+      },
+      "loglik": 355.36,
+      "AIC": -694.72,
+      "BIC": -644.8,
+      "mean_corr": -0.0459,
+      "std_corr": 0.2493
+    }
+  },
+  "weekend_correction": {
+    "no_adjustment": {
+      "loglik": 362.22,
+      "AIC": -708.44,
+      "BIC": -658.52,
+      "mean_corr": 0.153
+    },
+    "sqrt_adjustment": {
+      "loglik": 362.08,
+      "AIC": -708.16,
+      "BIC": -658.25,
+      "mean_corr": 0.1529
+    },
+    "improvement": {
+      "AIC_diff": -0.28,
+      "BIC_diff": -0.27,
+      "LL_diff": -0.14
+    }
+  },
+  "rolling_spillover": {
+    "key_points": {
+      "2015": {
+        "date": "2015-05-28",
+        "total": 9.8,
+        "btc_from": 0.5,
+        "btc_to": 0.1
+      },
+      "2018_volmageddon": {
+        "date": "2018-02-08",
+        "total": 10.3,
+        "btc_from": 0.4,
+        "btc_to": 0.6
+      },
+      "2020_covid": {
+        "date": "2020-03-26",
+        "total": 32.1,
+        "btc_from": 10.3,
+        "btc_to": 3.8
+      },
+      "2022_rate_hike": {
+        "date": "2022-06-04",
+        "total": 18.5,
+        "btc_from": 6.9,
+        "btc_to": 0.4
+      },
+      "2023_svb": {
+        "date": "2023-03-25",
+        "total": 14.1,
+        "btc_from": 3.1,
+        "btc_to": 0.4
+      },
+      "2024_etf": {
+        "date": "2024-02-24",
+        "total": 9.8,
+        "btc_from": 0.6,
+        "btc_to": 0.4
+      }
+    },
+    "summary": {
+      "mean_total": 14.7,
+      "max_total": 42.4,
+      "min_total": 7.7
+    }
+  },
+  "chameleon_effect": {
+    "COVID_Crash": {
+      "correlations": {
+        "BTC_Gold": 0.3049,
+        "BTC_SPX": 0.4916,
+        "BTC_Bond10Y_chg": -0.0693,
+        "BTC_WTI": 0.2449
+      },
+      "role": "Risk-On",
+      "n_obs": 33
+    },
+    "COVID_Recovery": {
+      "correlations": {
+        "BTC_Gold": 0.2726,
+        "BTC_SPX": 0.2717,
+        "BTC_Bond10Y_chg": 0.032,
+        "BTC_WTI": 0.1359
+      },
+      "role": "Safe-Haven",
+      "n_obs": 273
+    },
+    "Rate_Hike_2022": {
+      "correlations": {
+        "BTC_Gold": 0.1674,
+        "BTC_SPX": 0.5628,
+        "BTC_Bond10Y_chg": -0.1497,
+        "BTC_WTI": 0.1887
+      },
+      "role": "Risk-On",
+      "n_obs": 291
+    },
+    "FTX_Collapse": {
+      "correlations": {
+        "BTC_Gold": 0.1622,
+        "BTC_SPX": 0.5546,
+        "BTC_Bond10Y_chg": -0.192,
+        "BTC_WTI": 0.3568
+      },
+      "role": "Risk-On",
+      "n_obs": 61
+    },
+    "SVB_Crisis": {
+      "correlations": {
+        "BTC_Gold": 0.3247,
+        "BTC_SPX": 0.1876,
+        "BTC_Bond10Y_chg": -0.1864,
+        "BTC_WTI": -0.1716
+      },
+      "role": "Safe-Haven",
+      "n_obs": 54
+    },
+    "BTC_ETF_2024": {
+      "correlations": {
+        "BTC_Gold": 0.0749,
+        "BTC_SPX": 0.1919,
+        "BTC_Bond10Y_chg": -0.0519,
+        "BTC_WTI": -0.0146
+      },
+      "role": "Independent",
+      "n_obs": 173
+    },
+    "Normal_2019": {
+      "correlations": {
+        "BTC_Gold": 0.1079,
+        "BTC_SPX": -0.0488,
+        "BTC_Bond10Y_chg": -0.0236,
+        "BTC_WTI": -0.0318
+      },
+      "role": "Independent",
+      "n_obs": 365
+    }
+  },
+  "backtesting": {
+    "static_60_40": {
+      "ann_return": 5.15,
+      "ann_vol": 8.91,
+      "sharpe": 0.577,
+      "max_drawdown": -22.67
+    },
+    "static_alternative": {
+      "ann_return": 7.52,
+      "ann_vol": 9.22,
+      "sharpe": 0.815,
+      "max_drawdown": -25.04
+    },
+    "dynamic_mvp": {
+      "ann_return": 9.68,
+      "ann_vol": 10.03,
+      "sharpe": 0.965,
+      "max_drawdown": -22.51
+    },
+    "period": "2015-09-10 ~ 2025-01-31"
+  },
+  "uncertainty_analysis": {
+    "vix_regime": {
+      "BTC_SPX": {
+        "high_vix_corr": 0.2847,
+        "low_vix_corr": 0.0481,
+        "z_stat": 7.5207,
+        "p_value": 0.0
+      },
+      "BTC_Gold": {
+        "high_vix_corr": 0.1248,
+        "low_vix_corr": 0.0261,
+        "z_stat": 3.053,
+        "p_value": 0.002266
+      },
+      "Gold_Bond10Y_chg": {
+        "high_vix_corr": -0.2833,
+        "low_vix_corr": -0.3591,
+        "z_stat": 2.6,
+        "p_value": 0.009323
+      },
+      "Copper_Bond10Y_chg": {
+        "high_vix_corr": 0.0863,
+        "low_vix_corr": 0.0627,
+        "z_stat": 0.7308,
+        "p_value": 0.464912
+      }
+    }
+  },
+  "weekend_effect": {
+    "btc_dayofweek": {
+      "Mon": {
+        "mean": 0.4608,
+        "std": 3.8797,
+        "n": 540
+      },
+      "Tue": {
+        "mean": 0.0286,
+        "std": 3.6892,
+        "n": 540
+      },
+      "Wed": {
+        "mean": 0.1685,
+        "std": 3.9576,
+        "n": 541
+      },
+      "Thu": {
+        "mean": -0.0289,
+        "std": 4.4633,
+        "n": 542
+      },
+      "Fri": {
+        "mean": 0.1923,
+        "std": 3.5295,
+        "n": 542
+      },
+      "Day5": {
+        "mean": 0.1619,
+        "std": 2.824,
+        "n": 541
+      },
+      "Day6": {
+        "mean": 0.0256,
+        "std": 2.807,
+        "n": 541
+      }
+    },
+    "monday_test": {
+      "monday_mean": 0.4608,
+      "other_mean": 0.0914,
+      "monday_vol": 3.8797,
+      "other_vol": 3.5926,
+      "t_stat": 2.187,
+      "p_value": 0.028802
+    },
+    "friday_btc_monday_spx": {
+      "correlation": 0.0178,
+      "n_pairs": 540
+    }
+  },
+  "frequency_spillover": {
+    "short_1_5d": {
+      "matrix": {
+        "BTC": {
+          "BTC": 99.9,
+          "Gold": 0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": 0.1,
+          "SPX": 0.1
+        },
+        "Gold": {
+          "BTC": 0.8,
+          "Gold": 98.7,
+          "WTI": 0.1,
+          "Bond10Y_chg": 0.4,
+          "Copper": 0.0,
+          "SPX": 0.1
+        },
+        "WTI": {
+          "BTC": 0.4,
+          "Gold": 1.0,
+          "WTI": 98.5,
+          "Bond10Y_chg": 0.1,
+          "Copper": 0.0,
+          "SPX": 0.1
+        },
+        "Bond10Y_chg": {
+          "BTC": 0.1,
+          "Gold": 9.7,
+          "WTI": 3.8,
+          "Bond10Y_chg": 85.9,
+          "Copper": 0.0,
+          "SPX": 0.5
+        },
+        "Copper": {
+          "BTC": 0.9,
+          "Gold": 5.0,
+          "WTI": 6.6,
+          "Bond10Y_chg": 1.2,
+          "Copper": 86.2,
+          "SPX": 0.1
+        },
+        "SPX": {
+          "BTC": 4.3,
+          "Gold": 0.0,
+          "WTI": 5.7,
+          "Bond10Y_chg": 1.9,
+          "Copper": 2.8,
+          "SPX": 85.3
+        }
+      },
+      "total_index": 7.6
+    },
+    "medium_5_20d": {
+      "matrix": {
+        "BTC": {
+          "BTC": -0.0,
+          "Gold": 0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": 0.0,
+          "SPX": 0.0
+        },
+        "Gold": {
+          "BTC": 0.0,
+          "Gold": -0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": 0.0,
+          "SPX": 0.0
+        },
+        "WTI": {
+          "BTC": 0.0,
+          "Gold": -0.0,
+          "WTI": -0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": 0.0,
+          "SPX": 0.0
+        },
+        "Bond10Y_chg": {
+          "BTC": 0.0,
+          "Gold": -0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": -0.0,
+          "Copper": 0.0,
+          "SPX": 0.0
+        },
+        "Copper": {
+          "BTC": -0.0,
+          "Gold": -0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": -0.0,
+          "SPX": 0.0
+        },
+        "SPX": {
+          "BTC": -0.0,
+          "Gold": 0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": -0.0,
+          "SPX": -0.0
+        }
+      },
+      "total_index": 0.0
+    },
+    "long_20d_plus": {
+      "matrix": {
+        "BTC": {
+          "BTC": 0.0,
+          "Gold": 0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": 0.0,
+          "SPX": 0.0
+        },
+        "Gold": {
+          "BTC": 0.0,
+          "Gold": 0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": 0.0,
+          "SPX": 0.0
+        },
+        "WTI": {
+          "BTC": 0.0,
+          "Gold": 0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": 0.0,
+          "SPX": 0.0
+        },
+        "Bond10Y_chg": {
+          "BTC": 0.0,
+          "Gold": 0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": 0.0,
+          "SPX": 0.0
+        },
+        "Copper": {
+          "BTC": 0.0,
+          "Gold": 0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": 0.0,
+          "SPX": 0.0
+        },
+        "SPX": {
+          "BTC": 0.0,
+          "Gold": 0.0,
+          "WTI": 0.0,
+          "Bond10Y_chg": 0.0,
+          "Copper": 0.0,
+          "SPX": 0.0
+        }
+      },
+      "total_index": 0.0
+    }
+  },
+  "nonlinear_granger": {
+    "BTC→SPX": {
+      "high_stress": {
+        "F": 2.7898,
+        "p": 0.025924,
+        "lag": 4,
+        "n": 509
+      },
+      "low_stress": {
+        "F": 3.9221,
+        "p": 0.047738,
+        "lag": 1,
+        "n": 3278
+      }
+    },
+    "SPX→BTC": {
+      "high_stress": {
+        "F": 2.5481,
+        "p": 0.055197,
+        "lag": 3,
+        "n": 509
+      },
+      "low_stress": {
+        "F": 0.1668,
+        "p": 0.682988,
+        "lag": 1,
+        "n": 3278
+      }
+    },
+    "BTC→Gold": {
+      "high_stress": {
+        "F": 3.2289,
+        "p": 0.012424,
+        "lag": 4,
+        "n": 509
+      },
+      "low_stress": {
+        "F": 1.576,
+        "p": 0.19305,
+        "lag": 3,
+        "n": 3278
+      }
+    },
+    "Gold→BTC": {
+      "high_stress": {
+        "F": 1.3812,
+        "p": 0.229801,
+        "lag": 5,
+        "n": 509
+      },
+      "low_stress": {
+        "F": 0.9473,
+        "p": 0.416775,
+        "lag": 3,
+        "n": 3278
+      }
+    },
+    "Gold→Bond": {
+      "high_stress": {
+        "F": 0.4446,
+        "p": 0.505221,
+        "lag": 1,
+        "n": 509
+      },
+      "low_stress": {
+        "F": 0.3249,
+        "p": 0.807343,
+        "lag": 3,
+        "n": 3278
+      }
+    }
+  },
+  "asymmetric_correlation": {
+    "BTC_SPX": {
+      "extreme_down": 0.336,
+      "extreme_up": 0.0554,
+      "normal": 0.1247
+    },
+    "BTC_Gold": {
+      "extreme_down": 0.0939,
+      "extreme_up": 0.0216,
+      "normal": 0.069
+    },
+    "BTC_Bond10Y_chg": {
+      "extreme_down": -0.0164,
+      "extreme_up": -0.0742,
+      "normal": -0.0229
+    }
+  }
+}
